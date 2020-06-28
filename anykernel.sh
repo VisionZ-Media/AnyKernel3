@@ -27,5 +27,9 @@ ramdisk_compression=auto;
 ## AnyKernel install
 dump_boot;
 
+## VisionZ init
+backup_file init.rc
+insert_line init.rc "import /init.casuals.rc" after "import .*\.rc" "import /init.casuals.rc"
+
 write_boot;
 ## end install
